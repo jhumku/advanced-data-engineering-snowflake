@@ -8,7 +8,7 @@ SELECT
     pc.city_name AS city,
     c.country AS country_desc
 FROM FROSTBYTE_WEATHERSOURCE.onpoint_id.history_day hd
-JOIN FROSTBYTE_WEATHERSOURCEE.onpoint_id.postal_codes pc
+JOIN FROSTBYTE_WEATHERSOURCE.onpoint_id.postal_codes pc
     ON pc.postal_code = hd.postal_code
     AND pc.country = hd.country
 JOIN {{env}}_tasty_bytes.raw_pos.country c
